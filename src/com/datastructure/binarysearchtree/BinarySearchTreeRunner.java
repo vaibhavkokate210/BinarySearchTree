@@ -1,5 +1,7 @@
 package com.datastructure.binarysearchtree;
 
+import java.util.Scanner;
+
 public class BinarySearchTreeRunner 
 {
 	public static void main(String[] args) 
@@ -19,6 +21,12 @@ public class BinarySearchTreeRunner
 		bst.insert(63);
 		bst.insert(67);
 		bst.display();
+		System.out.println("\nEnter key tobe searched ");
+		Scanner sc=new Scanner(System.in);
+		if(bst.search(sc.nextInt()))
+		  System.out.println("key found");
+		else
+			System.out.println("key not found");
 	}
 
 }

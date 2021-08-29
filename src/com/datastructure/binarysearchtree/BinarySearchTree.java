@@ -42,6 +42,20 @@ public class BinarySearchTree
 			}
 		}
 	}
+	public boolean search(int id)
+	{
+		Node current = root;
+		while(current!=null){
+			if(current.key==id){
+				return true;
+			}else if(current.key>id){
+				current = current.left;
+			}else{
+				current = current.right;
+			}
+		}
+		return false;
+	}
 	public void display()
 	{
 		display(root);
